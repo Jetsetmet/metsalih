@@ -1,6 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import heroImg from "@/assets/hero.jpg";
+
+import headshotMain from "@/assets/media/headshot-main.jpg.asset.json";
+import headshot1 from "@/assets/media/headshot1.jpg.asset.json";
+import headshot2 from "@/assets/media/headshot2.jpg.asset.json";
+import headshot3 from "@/assets/media/headshot3.jpg.asset.json";
+import headshot2014 from "@/assets/media/headshot-2014.jpg.asset.json";
+import stuntShot from "@/assets/media/stunt-shot.jpg.asset.json";
+import gritty from "@/assets/media/gritty.jpg.asset.json";
+import bonnieClyde from "@/assets/media/bonnie-clyde.jpg.asset.json";
+import hatchet3 from "@/assets/media/hatchet3.jpg.asset.json";
+import baytown from "@/assets/media/baytown-eva.jpg.asset.json";
+import bridgewater from "@/assets/media/bridgewater.jpg.asset.json";
+import silverDress from "@/assets/media/silver-dress.jpg.asset.json";
+import voiceClub from "@/assets/media/voice-club.mp3.asset.json";
+import voiceCommercial from "@/assets/media/voice-commercial.mp3.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -14,10 +28,35 @@ export const Route = createFileRoute("/")({
 
 const navLinks = [
   { href: "#about", label: "About" },
+  { href: "#reels", label: "Reels" },
   { href: "#stunts", label: "Stunts" },
-  { href: "#acting", label: "Acting" },
+  { href: "#portfolio", label: "Portfolio" },
   { href: "#voice", label: "Voice" },
   { href: "#contact", label: "Contact" },
+];
+
+const gallery = [
+  { src: headshotMain.url, title: "Headshot" },
+  { src: stuntShot.url, title: "Stunt Shot" },
+  { src: gritty.url, title: "Gritty Look" },
+  { src: baytown.url, title: "Baytown Outlaws — doubling Eva Longoria" },
+  { src: bonnieClyde.url, title: "Bonnie & Clyde — doubling Sarah Hyland" },
+  { src: hatchet3.url, title: "Hatchet III — doubling Danielle Harris" },
+  { src: bridgewater.url, title: "The Bridgewater Murders" },
+  { src: headshot2014.url, title: "2014 Headshot" },
+  { src: headshot1.url, title: "Headshot" },
+  { src: headshot2.url, title: "Headshot" },
+  { src: headshot3.url, title: "Headshot" },
+  { src: silverDress.url, title: "Portrait" },
+];
+
+const reels = [
+  { id: "ATBpYf7arbs", title: "Actor Reel" },
+  { id: "UtyrfHywC48", title: "Stunt Demo" },
+  { id: "g5Gnc92cfe0", title: "Showreel" },
+  { id: "zJbVuzFoVJU", title: "The Exile — with Tracy Miller" },
+  { id: "TjNDB_GP_Lk", title: "Misdirection" },
+  { id: "EKGjmSmTntE", title: "Stunt Class — with Chelsea" },
 ];
 
 const filmCredits = [
@@ -65,6 +104,7 @@ const skills = [
 
 function Index() {
   const [open, setOpen] = useState(false);
+  const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -74,24 +114,17 @@ function Index() {
           <a href="#top" className="font-display text-xl font-bold tracking-tight">
             Met <span className="text-gold">Salih</span>
           </a>
-          <nav className="hidden gap-8 md:flex">
+          <nav className="hidden gap-7 md:flex">
             {navLinks.map((l) => (
               <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
                 {l.label}
               </a>
             ))}
           </nav>
-          <a
-            href="#contact"
-            className="hidden rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:opacity-90 md:inline-block"
-          >
+          <a href="#contact" className="hidden rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:opacity-90 md:inline-block">
             Book Met
           </a>
-          <button
-            aria-label="Toggle menu"
-            onClick={() => setOpen((v) => !v)}
-            className="rounded-md p-2 text-foreground md:hidden"
-          >
+          <button aria-label="Toggle menu" onClick={() => setOpen((v) => !v)} className="rounded-md p-2 text-foreground md:hidden">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               {open ? <path d="M6 6l12 12M6 18L18 6" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
             </svg>
@@ -105,9 +138,6 @@ function Index() {
                   {l.label}
                 </a>
               ))}
-              <a href="#contact" onClick={() => setOpen(false)} className="mt-2 rounded-full bg-primary px-5 py-2 text-center text-sm font-semibold text-primary-foreground">
-                Book Met
-              </a>
             </div>
           </div>
         )}
@@ -131,22 +161,22 @@ function Index() {
               Based between LA, New Orleans &amp; Atlanta — eligible to work in the US, UK and EU.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#stunts" className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-0.5">
-                View Credits
+              <a href="#reels" className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-0.5">
+                ▶ Watch Reels
               </a>
-              <a href="https://youtu.be/UtyrfHywC48" target="_blank" rel="noreferrer" className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-gold hover:text-gold">
-                ▶ Watch Stunt Reel
+              <a href="#stunts" className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-gold hover:text-gold">
+                View Credits
               </a>
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-4 rounded-3xl" style={{ background: "var(--gradient-gold)", opacity: 0.15, filter: "blur(40px)" }} />
+            <div className="absolute -inset-4 rounded-3xl" style={{ background: "var(--gradient-gold)", opacity: 0.18, filter: "blur(40px)" }} />
             <img
-              src={heroImg}
-              alt="Met Salih, stuntwoman in dynamic action pose"
-              width={1536}
-              height={1280}
-              className="relative rounded-2xl border border-border bg-card object-cover shadow-[var(--shadow-elegant)]"
+              src={headshotMain.url}
+              alt="Met Salih headshot"
+              width={800}
+              height={1000}
+              className="relative aspect-[4/5] w-full rounded-2xl border border-border bg-card object-cover shadow-[var(--shadow-elegant)]"
             />
           </div>
         </div>
@@ -167,12 +197,7 @@ function Index() {
               physicality and craft to every role.
             </p>
             <dl className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {[
-                ["50+", "Film & TV credits"],
-                ["3", "Stunt bases"],
-                ["10+", "Years SAG/AFTRA"],
-                ["1°", "Black belt"],
-              ].map(([n, l]) => (
+              {[["50+", "Film & TV credits"], ["3", "Stunt bases"], ["10+", "Years SAG/AFTRA"], ["1°", "Black belt"]].map(([n, l]) => (
                 <div key={l} className="rounded-xl border border-border bg-card p-4">
                   <dt className="font-display text-3xl font-bold text-primary">{n}</dt>
                   <dd className="mt-1 text-sm text-muted-foreground">{l}</dd>
@@ -183,70 +208,122 @@ function Index() {
         </div>
       </section>
 
-      {/* STUNTS */}
-      <section id="stunts" className="border-y border-border bg-secondary/50">
+      {/* REELS */}
+      <section id="reels" className="border-y border-border bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-gold">Stunt Work</p>
-              <h2 className="mt-3 text-4xl font-bold">Selected Credits</h2>
-            </div>
-            <a href="mailto:metsalih.stunts@gmail.com?subject=Stunt%20Resume%20Request" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
-              Request full resume →
-            </a>
-          </div>
-
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
-            <CreditList title="Film" items={filmCredits} />
-            <CreditList title="Television" items={tvCredits} />
-          </div>
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-xl font-bold">Stunt Coordinator</h3>
-              <ul className="mt-4 space-y-2 text-sm text-foreground/80">
-                {coordCredits.map((c) => (
-                  <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-xl font-bold">Training & Special Skills</h3>
-              <ul className="mt-4 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
-                {skills.map((s) => (
-                  <li key={s} className="flex gap-2"><span className="text-gold">◆</span>{s}</li>
-                ))}
-              </ul>
-            </div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-gold">Showreels</p>
+          <h2 className="mt-3 text-4xl font-bold">On Screen</h2>
+          <p className="mt-3 max-w-2xl text-foreground/80">A selection of reels and clips spanning stunts, acting and on-set work.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {reels.map((r) => (
+              <div key={r.id} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
+                <div className="aspect-video bg-black">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${r.id}`}
+                    title={r.title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="font-semibold">{r.title}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ACTING / VOICE */}
-      <section id="acting" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-card p-8 transition-shadow hover:shadow-[var(--shadow-elegant)]">
-            <p className="text-sm font-semibold uppercase tracking-widest text-gold">Acting</p>
-            <h2 className="mt-3 text-3xl font-bold">Trained for the camera.</h2>
-            <p className="mt-4 text-foreground/80">
-              Jerry Katz Master Class · The Lyndon Technique · Ivana Chubbuck · New York Film Academy ·
-              Central School of Speech &amp; Drama.
-            </p>
-            <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="mt-6 inline-block text-sm font-semibold text-primary hover:underline">
-              View IMDb profile →
-            </a>
+      {/* STUNTS */}
+      <section id="stunts" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-gold">Stunt Work</p>
+            <h2 className="mt-3 text-4xl font-bold">Selected Credits</h2>
           </div>
-          <div id="voice" className="rounded-2xl border border-border bg-card p-8 transition-shadow hover:shadow-[var(--shadow-elegant)]">
-            <p className="text-sm font-semibold uppercase tracking-widest text-gold">Voiceover</p>
-            <h2 className="mt-3 text-3xl font-bold">A voice with range.</h2>
-            <p className="mt-4 text-foreground/80">
-              Warm, versatile and commercially trained. Available for commercial, narration, character and
-              animation work — remote or studio.
-            </p>
-            <a href="#contact" className="mt-6 inline-block text-sm font-semibold text-primary hover:underline">
-              Request voice reel →
-            </a>
+          <a href="mailto:metsalih.stunts@gmail.com?subject=Stunt%20Resume%20Request" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
+            Request full resume →
+          </a>
+        </div>
+
+        <div className="mt-10 grid gap-8 lg:grid-cols-2">
+          <CreditList title="Film" items={filmCredits} />
+          <CreditList title="Television" items={tvCredits} />
+        </div>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h3 className="text-xl font-bold">Stunt Coordinator</h3>
+            <ul className="mt-4 space-y-2 text-sm text-foreground/80">
+              {coordCredits.map((c) => (
+                <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
+              ))}
+            </ul>
           </div>
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h3 className="text-xl font-bold">Training & Special Skills</h3>
+            <ul className="mt-4 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
+              {skills.map((s) => (
+                <li key={s} className="flex gap-2"><span className="text-gold">◆</span>{s}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* PORTFOLIO */}
+      <section id="portfolio" className="border-y border-border bg-secondary/40">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="text-sm font-semibold uppercase tracking-widest text-gold">Portfolio</p>
+          <h2 className="mt-3 text-4xl font-bold">Gallery</h2>
+          <p className="mt-3 max-w-2xl text-foreground/80">Headshots, on-set photography and behind-the-scenes from features and TV.</p>
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+            {gallery.map((g) => (
+              <button
+                key={g.src}
+                onClick={() => setLightbox(g.src)}
+                className="group relative aspect-square overflow-hidden rounded-xl border border-border bg-card"
+              >
+                <img
+                  src={g.src}
+                  alt={g.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-2 text-left text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
+                  {g.title}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VOICE */}
+      <section id="voice" className="mx-auto max-w-6xl px-6 py-20">
+        <p className="text-sm font-semibold uppercase tracking-widest text-gold">Voiceover</p>
+        <h2 className="mt-3 text-4xl font-bold">Voice Reels</h2>
+        <p className="mt-3 max-w-2xl text-foreground/80">Warm, versatile and commercially trained — available for commercial, narration, character and animation work.</p>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {[
+            { title: "Club Voice Reel", src: voiceClub.url },
+            { title: "Commercial Voice Reel", src: voiceCommercial.url },
+          ].map((v) => (
+            <div key={v.src} className="rounded-2xl border border-border bg-card p-6">
+              <div className="flex items-center gap-3">
+                <span className="grid h-12 w-12 place-items-center rounded-full text-xl" style={{ background: "var(--gradient-gold)" }}>🎙️</span>
+                <div>
+                  <p className="font-display text-xl font-bold">{v.title}</p>
+                  <p className="text-sm text-muted-foreground">Met Salih</p>
+                </div>
+              </div>
+              <audio controls preload="none" src={v.src} className="mt-5 w-full">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -268,7 +345,11 @@ function Index() {
               <p className="mt-2 break-all font-display text-xl font-bold text-foreground group-hover:text-primary">metsalih.stunts@gmail.com</p>
             </a>
           </div>
-          <p className="mt-10 text-sm text-muted-foreground">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+            <span>Agent: Valerie Lynn Hanna · Fruition Talent</span>
+            <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">IMDb →</a>
+          </div>
+          <p className="mt-6 text-sm text-muted-foreground">
             Based in LA · New Orleans · Atlanta — Eligible to work in US, UK &amp; EU
           </p>
         </div>
@@ -280,6 +361,23 @@ function Index() {
           <p className="font-display italic">"Find a job you enjoy."</p>
         </div>
       </footer>
+
+      {/* LIGHTBOX */}
+      {lightbox && (
+        <div
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-[100] grid place-items-center bg-black/85 p-6 backdrop-blur-sm"
+        >
+          <button
+            aria-label="Close"
+            className="absolute right-6 top-6 grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white hover:bg-white/20"
+            onClick={() => setLightbox(null)}
+          >
+            ✕
+          </button>
+          <img src={lightbox} alt="" className="max-h-[90vh] max-w-full rounded-lg object-contain" />
+        </div>
+      )}
     </div>
   );
 }
