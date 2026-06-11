@@ -115,8 +115,9 @@ function Index() {
       {/* NAV */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-lg">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="font-display text-xl font-bold tracking-tight">
-            Met <span className="text-gold">Salih</span>
+          <a href="#top" className="flex items-center gap-3">
+            <img src={jetsetmetLogo.url} alt="JetSetMet logo" className="h-10 w-10 rounded-full object-cover" />
+            <span className="font-display text-xl font-bold tracking-tight">Met <span className="text-gold">Salih</span></span>
           </a>
           <nav className="hidden gap-7 md:flex">
             {navLinks.map((l) => (
