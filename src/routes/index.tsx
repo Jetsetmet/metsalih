@@ -170,6 +170,9 @@ function Index() {
               <a href="#stunts" className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-gold hover:text-gold">
                 View Credits
               </a>
+              <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="rounded-full border border-gold bg-card px-6 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-gold-foreground">
+                IMDb →
+              </a>
             </div>
           </div>
           <div className="relative">
@@ -205,6 +208,7 @@ function Index() {
                 href={stuntResume.url}
                 target="_blank"
                 rel="noreferrer"
+                download="MetSalih_StuntResume2026.pdf"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-0.5"
               >
                 ↓ Stunt Resume (PDF)
@@ -213,6 +217,7 @@ function Index() {
                 href={icResume.url}
                 target="_blank"
                 rel="noreferrer"
+                download="Met_Salih_IC_Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-full border border-gold bg-card px-5 py-2.5 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-gold-foreground"
               >
                 ↓ Intimacy Coordinator Resume (PDF)
