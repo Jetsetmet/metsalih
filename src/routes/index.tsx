@@ -337,11 +337,11 @@ function Index() {
             For bookings, resumes or production enquiries — reach out directly.
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            <div className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]">
+            <a href="https://www.actorschoicetalent.com/contact" target="_blank" rel="noreferrer" className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]">
               <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Acting Enquiries</p>
               <p className="mt-2 font-display text-xl font-bold text-foreground group-hover:text-primary">Lisa · Actors Choice Talent Agency</p>
               <p className="mt-1 text-sm text-muted-foreground">Contact Lisa for all acting bookings</p>
-            </div>
+            </a>
             <button
               onClick={() => {
                 setEmailRevealed(true);
