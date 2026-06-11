@@ -244,7 +244,7 @@ function Index() {
             <p className="text-sm font-semibold uppercase tracking-widest text-gold">Stunt Work</p>
             <h2 className="mt-3 text-4xl font-bold">Selected Credits</h2>
           </div>
-          <a href="mailto:metsalih.stunts@gmail.com?subject=Stunt%20Resume%20Request" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
+          <a href="#contact" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
             Request full resume →
           </a>
         </div>
