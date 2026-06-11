@@ -17,6 +17,7 @@ import voiceClub from "@/assets/media/voice-club.mp3.asset.json";
 import voiceCommercial from "@/assets/media/voice-commercial.mp3.asset.json";
 import stuntResume from "@/assets/media/stunt-resume.pdf.asset.json";
 import icResume from "@/assets/media/ic-resume.pdf.asset.json";
+import jetsetmetLogo from "@/assets/jetsetmet-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -65,7 +66,7 @@ const filmCredits = [
   { title: "Rampage", role: "Stunts", coord: "Dan Stevens / Allan Poppleton" },
   { title: "Blockers", role: "Stunt Double", coord: "Steve Ritzi" },
   { title: "Girls Trip", role: "Stunt Double — Jada Pinkett Smith", coord: "Lex Geddings" },
-  { title: "Jack Reacher 2: Never Go Back", role: "Precision Driver", coord: "Wade Eastwood" },
+  { title: "Jack Reacher 2: Never Go Back", role: "Stunts", coord: "Wade Eastwood" },
   { title: "Geostorm", role: "Stunt Performer", coord: "Charlie Croughwell" },
   { title: "Cut Throat City", role: "Stunts", coord: "Andy Dylan" },
   { title: "Kidnap", role: "Stunts", coord: "Andy Dylan / Steve Ritzi" },
@@ -352,6 +353,7 @@ function Index() {
       {/* CONTACT */}
       <section id="contact" className="border-t border-border" style={{ background: "var(--gradient-hero)" }}>
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
+          <img src={jetsetmetLogo.url} alt="JetSetMet logo" className="mx-auto mb-8 h-28 w-28 rounded-full object-contain md:h-36 md:w-36" />
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">Get in touch</p>
           <h2 className="mt-3 text-4xl font-bold md:text-5xl">Let's make something.</h2>
           <p className="mx-auto mt-4 max-w-xl text-foreground/80">
@@ -370,11 +372,11 @@ function Index() {
               }}
               className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]"
             >
-              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Stunt Bookings</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Stunt &amp; Intimacy Coordinator Bookings</p>
               <p className="mt-2 break-all font-display text-xl font-bold text-foreground group-hover:text-primary">
                 {emailRevealed ? "metsalih.stunts@gmail.com" : "Click to reveal email"}
               </p>
-              <p className="mt-1 text-sm text-muted-foreground">Email for stunt & coordination bookings</p>
+              <p className="mt-1 text-sm text-muted-foreground">Email for stunt, intimacy coordination &amp; on-set bookings</p>
             </button>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
