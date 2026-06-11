@@ -17,6 +17,7 @@ import voiceClub from "@/assets/media/voice-club.mp3.asset.json";
 import voiceCommercial from "@/assets/media/voice-commercial.mp3.asset.json";
 import stuntResume from "@/assets/media/stunt-resume.pdf.asset.json";
 import icResume from "@/assets/media/ic-resume.pdf.asset.json";
+import jetsetmetLogo from "@/assets/jetsetmet-logo.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -352,6 +353,7 @@ function Index() {
       {/* CONTACT */}
       <section id="contact" className="border-t border-border" style={{ background: "var(--gradient-hero)" }}>
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
+          <img src={jetsetmetLogo.url} alt="JetSetMet logo" className="mx-auto mb-8 h-28 w-28 rounded-full object-contain md:h-36 md:w-36" />
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">Get in touch</p>
           <h2 className="mt-3 text-4xl font-bold md:text-5xl">Let's make something.</h2>
           <p className="mx-auto mt-4 max-w-xl text-foreground/80">
