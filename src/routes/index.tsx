@@ -357,7 +357,7 @@ function Index() {
             </button>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span>Agent: Lisa · Actors Choice Talent Agency</span>
+            <span>Agent: <a href="https://www.actorschoicetalent.com/contact" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">Lisa · Actors Choice Talent Agency</a></span>
             <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">IMDb →</a>
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
