@@ -337,11 +337,11 @@ function Index() {
             For bookings, resumes or production enquiries — reach out directly.
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            <div className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]">
+            <a href="https://www.actorschoicetalent.com/contact" target="_blank" rel="noreferrer" className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]">
               <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Acting Enquiries</p>
               <p className="mt-2 font-display text-xl font-bold text-foreground group-hover:text-primary">Lisa · Actors Choice Talent Agency</p>
               <p className="mt-1 text-sm text-muted-foreground">Contact Lisa for all acting bookings</p>
-            </div>
+            </a>
             <button
               onClick={() => {
                 setEmailRevealed(true);
@@ -357,7 +357,7 @@ function Index() {
             </button>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span>Agent: Lisa · Actors Choice Talent Agency</span>
+            <span>Agent: <a href="https://www.actorschoicetalent.com/contact" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">Lisa · Actors Choice Talent Agency</a></span>
             <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">IMDb →</a>
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
