@@ -46,7 +46,6 @@ const gallery = [
   { src: bonnieClyde.url, title: "Bonnie & Clyde — doubling Sarah Hyland" },
   { src: hatchet3.url, title: "Hatchet III — doubling Danielle Harris" },
   { src: bridgewater.url, title: "The Bridgewater Murders" },
-  { src: headshot2014.url, title: "2014 Headshot" },
   { src: headshot1.url, title: "Headshot" },
   { src: headshot2.url, title: "Headshot" },
   { src: headshot3.url, title: "Headshot" },
@@ -55,11 +54,9 @@ const gallery = [
 
 const reels = [
   { id: "ATBpYf7arbs", title: "Actor Reel" },
-  { id: "UtyrfHywC48", title: "Stunt Demo" },
   { id: "g5Gnc92cfe0", title: "Showreel" },
   { id: "zJbVuzFoVJU", title: "The Exile — with Tracy Miller" },
   { id: "TjNDB_GP_Lk", title: "Misdirection" },
-  { id: "EKGjmSmTntE", title: "Stunt Class — with Chelsea" },
 ];
 
 const filmCredits = [
