@@ -105,6 +105,7 @@ const skills = [
 function Index() {
   const [open, setOpen] = useState(false);
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const [emailRevealed, setEmailRevealed] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
