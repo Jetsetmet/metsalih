@@ -161,7 +161,7 @@ function Index() {
             </p>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-foreground/80">
               Find a job you enjoy and you never have to work again for the rest of your life.
-              Based between LA, New Orleans &amp; Atlanta — eligible to work in the US, UK and EU.
+              Based in New Orleans — eligible to work in the US, UK and EU.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#reels" className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-0.5">
@@ -383,7 +383,7 @@ function Index() {
             <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">IMDb →</a>
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
-            Based in LA · New Orleans · Atlanta — Eligible to work in US, UK &amp; EU
+            Based in New Orleans — Eligible to work in US, UK &amp; EU
           </p>
         </div>
       </section>
