@@ -337,17 +337,27 @@ function Index() {
             For bookings, resumes or production enquiries — reach out directly.
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            <a href="tel:+13233488441" className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]">
-              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Call</p>
-              <p className="mt-2 font-display text-2xl font-bold text-foreground group-hover:text-primary">323 348 8441</p>
-            </a>
-            <a href="mailto:metsalih.stunts@gmail.com" className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]">
-              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Email</p>
-              <p className="mt-2 break-all font-display text-xl font-bold text-foreground group-hover:text-primary">metsalih.stunts@gmail.com</p>
-            </a>
+            <div className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]">
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Acting Enquiries</p>
+              <p className="mt-2 font-display text-xl font-bold text-foreground group-hover:text-primary">Lisa · Actors Choice Talent Agency</p>
+              <p className="mt-1 text-sm text-muted-foreground">Contact Lisa for all acting bookings</p>
+            </div>
+            <button
+              onClick={() => {
+                setEmailRevealed(true);
+                window.location.href = "mailto:metsalih.stunts@gmail.com";
+              }}
+              className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]"
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Stunt Bookings</p>
+              <p className="mt-2 break-all font-display text-xl font-bold text-foreground group-hover:text-primary">
+                {emailRevealed ? "metsalih.stunts@gmail.com" : "Click to reveal email"}
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">Email for stunt & coordination bookings</p>
+            </button>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span>Agent: Valerie Lynn Hanna · Fruition Talent</span>
+            <span>Agent: Lisa · Actors Choice Talent Agency</span>
             <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">IMDb →</a>
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
