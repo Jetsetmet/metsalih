@@ -15,12 +15,14 @@ import bridgewater from "@/assets/media/bridgewater.jpg.asset.json";
 import silverDress from "@/assets/media/silver-dress.jpg.asset.json";
 import voiceClub from "@/assets/media/voice-club.mp3.asset.json";
 import voiceCommercial from "@/assets/media/voice-commercial.mp3.asset.json";
+import stuntResume from "@/assets/media/stunt-resume.pdf.asset.json";
+import icResume from "@/assets/media/ic-resume.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Met Salih — Actress, Stuntwoman & Voiceover Artist" },
-      { name: "description", content: "Met Salih (SAG/AFTRA) — actress, stunt performer and voiceover artist. Credits include Rampage, Girls Trip, The Walking Dead and more." },
+      { title: "Met Salih — Actress, Stuntwoman, Intimacy Coordinator & Voiceover Artist" },
+      { name: "description", content: "Met Salih (SAG/AFTRA) — actress, stunt performer, intimacy coordinator and voiceover artist. Credits include Rampage, Girls Trip, The Walking Dead and more." },
     ],
   }),
   component: Index,
@@ -155,7 +157,7 @@ function Index() {
               Met <span className="text-primary">Salih</span>
             </h1>
             <p className="mt-4 text-lg font-medium text-muted-foreground md:text-xl">
-              Actress · Stuntwoman · Voiceover Artist
+              Actress · Stuntwoman · Intimacy Coordinator · Voiceover Artist
             </p>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-foreground/80">
               Find a job you enjoy and you never have to work again for the rest of your life.
@@ -192,11 +194,30 @@ function Index() {
           </div>
           <div className="md:col-span-2">
             <p className="text-lg leading-relaxed text-foreground/80">
-              Met Salih is a SAG/AFTRA stunt performer, trained actor and voiceover artist with over a decade of
-              credits across major studio features and prestige television. From precision driving on
-              <em> Jack Reacher</em> to doubling Jada Pinkett Smith in <em>Girls Trip</em>, Met brings discipline,
-              physicality and craft to every role.
+              Met Salih is a SAG/AFTRA stunt performer, trained actor, certified intimacy coordinator and
+              voiceover artist with over a decade of credits across major studio features and prestige
+              television. From precision driving on <em>Jack Reacher</em> to doubling Jada Pinkett Smith in
+              <em> Girls Trip</em>, Met brings discipline, physicality, craft and a safe, collaborative set
+              presence to every role.
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={stuntResume.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-0.5"
+              >
+                ↓ Stunt Resume (PDF)
+              </a>
+              <a
+                href={icResume.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-gold bg-card px-5 py-2.5 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-gold-foreground"
+              >
+                ↓ Intimacy Coordinator Resume (PDF)
+              </a>
+            </div>
             <dl className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {[["50+", "Film & TV credits"], ["3", "Stunt bases"], ["10+", "Years SAG/AFTRA"], ["1°", "Black belt"]].map(([n, l]) => (
                 <div key={l} className="rounded-xl border border-border bg-card p-4">
@@ -244,8 +265,8 @@ function Index() {
             <p className="text-sm font-semibold uppercase tracking-widest text-gold">Stunt Work</p>
             <h2 className="mt-3 text-4xl font-bold">Selected Credits</h2>
           </div>
-          <a href="#contact" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
-            Request full resume →
+          <a href={stuntResume.url} target="_blank" rel="noreferrer" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
+            Download full resume (PDF) →
           </a>
         </div>
 
