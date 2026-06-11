@@ -170,6 +170,9 @@ function Index() {
               <a href="#stunts" className="rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-gold hover:text-gold">
                 View Credits
               </a>
+              <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="rounded-full border border-gold bg-card px-6 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-gold-foreground">
+                IMDb →
+              </a>
             </div>
           </div>
           <div className="relative">
