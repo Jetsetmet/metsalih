@@ -173,6 +173,9 @@ function Index() {
               <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="rounded-full border border-gold bg-card px-6 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-gold-foreground">
                 IMDb →
               </a>
+              <a href="https://resumes.actorsaccess.com/metsalih" target="_blank" rel="noreferrer" className="rounded-full border border-gold bg-card px-6 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-gold-foreground">
+                Actors Access →
+              </a>
             </div>
           </div>
           <div className="relative">
@@ -386,6 +389,7 @@ function Index() {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <span>Agent: <a href="https://www.actorschoicetalent.com/contact" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">Lisa · Actors Choice Talent Agency</a></span>
             <a href="https://www.imdb.me/metsalih" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">IMDb →</a>
+            <a href="https://resumes.actorsaccess.com/metsalih" target="_blank" rel="noreferrer" className="font-semibold text-primary hover:underline">Actors Access →</a>
           </div>
           <p className="mt-6 text-sm text-muted-foreground">
             Based in New Orleans — Eligible to work in US, UK &amp; EU
