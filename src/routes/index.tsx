@@ -65,7 +65,7 @@ const filmCredits = [
   { title: "Rampage", role: "Stunts", coord: "Dan Stevens / Allan Poppleton" },
   { title: "Blockers", role: "Stunt Double", coord: "Steve Ritzi" },
   { title: "Girls Trip", role: "Stunt Double — Jada Pinkett Smith", coord: "Lex Geddings" },
-  { title: "Jack Reacher 2: Never Go Back", role: "Precision Driver", coord: "Wade Eastwood" },
+  { title: "Jack Reacher 2: Never Go Back", role: "Stunts", coord: "Wade Eastwood" },
   { title: "Geostorm", role: "Stunt Performer", coord: "Charlie Croughwell" },
   { title: "Cut Throat City", role: "Stunts", coord: "Andy Dylan" },
   { title: "Kidnap", role: "Stunts", coord: "Andy Dylan / Steve Ritzi" },
@@ -370,11 +370,11 @@ function Index() {
               }}
               className="group rounded-2xl border border-border bg-card p-6 text-left transition-all hover:border-gold hover:shadow-[var(--shadow-gold)]"
             >
-              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Stunt Bookings</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Stunt &amp; Intimacy Coordinator Bookings</p>
               <p className="mt-2 break-all font-display text-xl font-bold text-foreground group-hover:text-primary">
                 {emailRevealed ? "metsalih.stunts@gmail.com" : "Click to reveal email"}
               </p>
-              <p className="mt-1 text-sm text-muted-foreground">Email for stunt & coordination bookings</p>
+              <p className="mt-1 text-sm text-muted-foreground">Email for stunt, intimacy coordination &amp; on-set bookings</p>
             </button>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
