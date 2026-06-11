@@ -53,6 +53,7 @@ const gallery = [
 ];
 
 const reels = [
+  { id: "hefyapgrAbw", title: "Latest Reel" },
   { id: "ATBpYf7arbs", title: "Actor Reel" },
   { id: "g5Gnc92cfe0", title: "Showreel" },
   { id: "zJbVuzFoVJU", title: "The Exile — with Tracy Miller" },
@@ -195,7 +196,7 @@ function Index() {
             <p className="text-lg leading-relaxed text-foreground/80">
               Met Salih is a SAG/AFTRA stunt performer, trained actor, certified intimacy coordinator and
               voiceover artist with over a decade of credits across major studio features and prestige
-              television. From precision driving on <em>Jack Reacher</em> to doubling Jada Pinkett Smith in
+              television. From stunt work on <em>Rampage</em> to doubling Jada Pinkett Smith in
               <em> Girls Trip</em>, Met brings discipline, physicality, craft and a safe, collaborative set
               presence to every role.
             </p>
