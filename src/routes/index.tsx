@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
 import headshotMain from "@/assets/media/headshot-main.jpg.asset.json";
-import heroPortrait from "@/assets/media/hero-portrait.webp.asset.json";
 import headshot1 from "@/assets/media/headshot1.jpg.asset.json";
 import headshot2 from "@/assets/media/headshot2.jpg.asset.json";
 import headshot3 from "@/assets/media/headshot3.jpg.asset.json";
@@ -182,11 +181,11 @@ function Index() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-3xl" style={{ background: "var(--gradient-gold)", opacity: 0.18, filter: "blur(40px)" }} />
             <img
-              src={heroPortrait.url}
+              src={headshotMain.url}
               alt="Met Salih headshot"
-              width={1280}
-              height={1920}
-              className="relative aspect-[2/3] max-h-[70vh] w-full rounded-2xl border border-border bg-card object-cover object-top shadow-[var(--shadow-elegant)]"
+              width={800}
+              height={1000}
+              className="relative aspect-[4/5] w-full rounded-2xl border border-border bg-card object-cover shadow-[var(--shadow-elegant)]"
             />
           </div>
         </div>
