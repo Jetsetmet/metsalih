@@ -186,7 +186,7 @@ function Index() {
               alt="Met Salih headshot"
               width={1280}
               height={1920}
-              className="relative aspect-[3/4] w-full rounded-2xl border border-border bg-card object-cover object-[center_25%] shadow-[var(--shadow-elegant)]"
+              className="relative aspect-[2/3] max-h-[70vh] w-full rounded-2xl border border-border bg-card object-cover object-top shadow-[var(--shadow-elegant)]"
             />
           </div>
         </div>
