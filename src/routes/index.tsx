@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
-import headshotMain from "@/assets/media/headshot-main.jpg.asset.json";
 import openingPortrait from "@/assets/met-salih-opening-portrait.png.asset.json";
 import headshot1 from "@/assets/media/headshot1.jpg.asset.json";
 import headshot2 from "@/assets/media/headshot2.jpg.asset.json";
@@ -44,7 +43,7 @@ const navLinks = [
 ];
 
 const gallery = [
-  { src: headshotMain.url, title: "Headshot" },
+
   { src: stuntShot.url, title: "Stunt Shot" },
   { src: gritty.url, title: "Gritty Look" },
   { src: baytown.url, title: "Baytown Outlaws — doubling Eva Longoria" },
@@ -103,8 +102,9 @@ const skills = [
   "Tae Kwon Do / Kuk Sool Won — Black Belt",
   "Stunt fighting & weapons",
   "Precision driving",
-  "High falls & ratchets",
-  "Motorcycle, snowboarding, skiing",
+  "High falls",
+  "Snowboarding, skiing",
+
   "PADI Open Water, horse riding",
 ];
 
