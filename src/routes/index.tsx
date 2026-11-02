@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
 import headshotMain from "@/assets/media/headshot-main.jpg.asset.json";
+import openingPortrait from "@/assets/met-salih-opening-portrait.png.asset.json";
 import headshot1 from "@/assets/media/headshot1.jpg.asset.json";
 import headshot2 from "@/assets/media/headshot2.jpg.asset.json";
 import headshot3 from "@/assets/media/headshot3.jpg.asset.json";
@@ -24,6 +25,10 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Met Salih — Actress, Stuntwoman, Intimacy Coordinator & Voiceover Artist" },
       { name: "description", content: "Met Salih (SAG/AFTRA) — actress, stunt performer, intimacy coordinator and voiceover artist. Credits include Rampage, Girls Trip, The Walking Dead and more." },
+      { property: "og:title", content: "Met Salih — Actress, Stuntwoman, Intimacy Coordinator & Voiceover Artist" },
+      { property: "og:description", content: "Explore Met Salih’s reels, credits and resumes for acting, stunt and intimacy coordinator bookings." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -181,7 +186,7 @@ function Index() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-3xl" style={{ background: "var(--gradient-gold)", opacity: 0.18, filter: "blur(40px)" }} />
             <img
-              src={headshotMain.url}
+              src={openingPortrait.url}
               alt="Met Salih headshot"
               width={800}
               height={1000}
