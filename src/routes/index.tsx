@@ -254,7 +254,7 @@ function Index() {
           </a>
         </div>
 
-        <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
+        <div className="mx-auto mt-8 max-w-md overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
           <div className="aspect-video bg-black">
             <iframe
               src="https://www.youtube.com/embed/hefyapgrAbw"
