@@ -58,7 +58,6 @@ const gallery = [
 ];
 
 const reels = [
-  { id: "hefyapgrAbw", title: "Latest Reel" },
   { id: "ATBpYf7arbs", title: "Actor Reel" },
   { id: "g5Gnc92cfe0", title: "Showreel" },
   { id: "zJbVuzFoVJU", title: "The Exile — with Tracy Miller" },
@@ -258,7 +257,7 @@ function Index() {
         <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
           <div className="aspect-video bg-black">
             <iframe
-              src="https://www.youtube.com/embed/UtyrfHywC48"
+              src="https://www.youtube.com/embed/hefyapgrAbw"
               title="Stunt Demo Reel"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
