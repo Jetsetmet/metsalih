@@ -37,6 +37,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#reels", label: "Reels" },
   { href: "#stunts", label: "Stunts" },
+  { href: "#intimacy", label: "Intimacy" },
   { href: "#portfolio", label: "Portfolio" },
   { href: "#voice", label: "Voice" },
   { href: "#contact", label: "Contact" },
@@ -96,6 +97,35 @@ const coordCredits = [
   "The Convent — Dir. Justin Jones",
   "Dream House Nightmares — Dir. Jose Montesinos",
   "The Miles Were Many — Dir. Ashley Wright",
+];
+
+const icPhases = [
+  {
+    stage: "Pre-Production",
+    body: "Script review, intimate-scene choreography, barriers and modesty garments, nudity-rider negotiation, casting support and rehearsals aligned with the director's vision.",
+  },
+  {
+    stage: "On Set",
+    body: "Facilitated rehearsals, closed-set protocols, clear communication, SAG-AFTRA compliance and actor support before, during and after every take.",
+  },
+  {
+    stage: "Post-Production",
+    body: "Cut review for compliance, nudity-rider sign-off and aftercare check-ins with performers once the shoot wraps.",
+  },
+];
+
+const icCreditedWork = [
+  "Interview with the Vampire — Intimacy Coordinator, 60 hrs (2022)",
+  "Tempest — Dir. Greg Green, Intimacy Coordinator, 16 hrs (2024)",
+  "Blood in the Bayou — Dir. Kenn Michael",
+  "The Convent — Dir. Justin Jones",
+];
+
+const icApproach = [
+  "Intimacy Coordination for Film & TV — Diploma, Laura Rikard (TIE)",
+  "Trauma-informed practice, consent and clear set communication",
+  "Certified Yoga & Breathwork teacher — grounded, actor-first presence",
+  "SAG-AFTRA protocols, closed sets and modesty-garment handling",
 ];
 
 const skills = [
@@ -304,6 +334,65 @@ function Index() {
                 <li key={s} className="flex gap-2"><span className="text-gold">◆</span>{s}</li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* INTIMACY COORDINATION */}
+      <section id="intimacy" className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="text-sm font-semibold uppercase tracking-widest text-gold">Intimacy Coordination</p>
+          <h2 className="mt-3 text-4xl font-bold">Conscious, consent-first intimacy work</h2>
+          <p className="mt-3 max-w-2xl text-foreground/80">
+            Certified intimacy coordinator with two decades of on-set experience. I choreograph intimate
+            scenes, protect performer boundaries and keep the day moving — so directors get the story and
+            actors stay safe and heard.
+          </p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {icPhases.map((p) => (
+              <div key={p.stage} className="rounded-2xl border border-border bg-card p-6">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold">{p.stage}</p>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/80">{p.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-card p-6">
+              <h3 className="text-xl font-bold">Selected Intimacy Credits</h3>
+              <ul className="mt-4 space-y-2 text-sm text-foreground/80">
+                {icCreditedWork.map((c) => (
+                  <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6">
+              <h3 className="text-xl font-bold">Training &amp; Approach</h3>
+              <ul className="mt-4 space-y-2 text-sm text-foreground/80">
+                {icApproach.map((c) => (
+                  <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href={icResume.url}
+              target="_blank"
+              rel="noreferrer"
+              download="Met_Salih_IC_Resume.pdf"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-0.5"
+            >
+              ↓ Intimacy Coordinator Resume (PDF)
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-gold bg-card px-5 py-2.5 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-gold-foreground"
+            >
+              Book intimacy coordination →
+            </a>
           </div>
         </div>
       </section>
