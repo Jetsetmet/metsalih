@@ -72,12 +72,6 @@ const filmCredits = [
   { title: "Jack Reacher 2: Never Go Back", role: "Stunts", coord: "Wade Eastwood" },
   { title: "Geostorm", role: "Stunt Performer", coord: "Charlie Croughwell" },
   { title: "Cut Throat City", role: "Stunts", coord: "Andy Dylan" },
-  { title: "Kidnap", role: "Stunts", coord: "Andy Dylan / Steve Ritzi" },
-  { title: "Hot Pursuit", role: "Stunt Performer", coord: "Charlie Croughwell" },
-  { title: "Dawn of the Planet of the Apes", role: "Stunt Performer", coord: "Charlie Croughwell" },
-  { title: "Now You See Me", role: "Stunt Actor", coord: "Stephen Pope" },
-  { title: "Texas Chainsaw 3D", role: "Stunt Actor", coord: "Steve Griffin" },
-  { title: "This Is the End", role: "Stunt Performer", coord: "Steve Ritzi" },
 ];
 
 const tvCredits = [
@@ -86,9 +80,6 @@ const tvCredits = [
   { title: "MacGyver", role: "Stunt Performer", coord: "Jeff Wolfe" },
   { title: "NCIS: New Orleans", role: "Double — Shalita Grant & Tony Trucks", coord: "Jonathan Arthur" },
   { title: "Claws", role: "Lead Double — Karrueche Tran", coord: "Keith Adams" },
-  { title: "Cloak and Dagger (Marvel)", role: "Utility Stunts", coord: "Andy Dylan" },
-  { title: "American Horror Story", role: "Utility Stunts", coord: "Jim Henry" },
-  { title: "Invisible Sister (Disney)", role: "Stunt Double", coord: "Rudy Weber" },
 ];
 
 const coordCredits = [
@@ -99,21 +90,6 @@ const coordCredits = [
   "The Miles Were Many — Dir. Ashley Wright",
 ];
 
-const icPhases = [
-  {
-    stage: "Pre-Production",
-    body: "Script review, intimate-scene choreography, barriers and modesty garments, nudity-rider negotiation, casting support and rehearsals aligned with the director's vision.",
-  },
-  {
-    stage: "On Set",
-    body: "Facilitated rehearsals, closed-set protocols, clear communication, SAG-AFTRA compliance and actor support before, during and after every take.",
-  },
-  {
-    stage: "Post-Production",
-    body: "Cut review for compliance, nudity-rider sign-off and aftercare check-ins with performers once the shoot wraps.",
-  },
-];
-
 const icCreditedWork = [
   "Interview with the Vampire — Intimacy Coordinator, 60 hrs (2022)",
   "Tempest — Dir. Greg Green, Intimacy Coordinator, 16 hrs (2024)",
@@ -121,12 +97,6 @@ const icCreditedWork = [
   "The Convent — Dir. Justin Jones",
 ];
 
-const icApproach = [
-  "Intimacy Coordination for Film & TV — Diploma, Laura Rikard (TIE)",
-  "Trauma-informed practice, consent and clear set communication",
-  "Certified Yoga & Breathwork teacher — grounded, actor-first presence",
-  "SAG-AFTRA protocols, closed sets and modesty-garment handling",
-];
 
 const skills = [
   "Tae Kwon Do / Kuk Sool Won — Black Belt",
@@ -273,34 +243,6 @@ function Index() {
         </div>
       </section>
 
-      {/* REELS */}
-      <section id="reels" className="border-y border-border bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold">Showreels</p>
-          <h2 className="mt-3 text-4xl font-bold">On Screen</h2>
-          <p className="mt-3 max-w-2xl text-foreground/80">A selection of reels and clips spanning stunts, acting and on-set work.</p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {reels.map((r) => (
-              <div key={r.id} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
-                <div className="aspect-video bg-black">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${r.id}`}
-                    title={r.title}
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="h-full w-full"
-                  />
-                </div>
-                <div className="p-4">
-                  <p className="font-semibold">{r.title}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* STUNTS */}
       <section id="stunts" className="mx-auto max-w-6xl px-6 py-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
@@ -311,6 +253,22 @@ function Index() {
           <a href={stuntResume.url} target="_blank" rel="noreferrer" className="text-sm font-semibold text-primary underline-offset-4 hover:underline">
             Download full resume (PDF) →
           </a>
+        </div>
+
+        <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
+          <div className="aspect-video bg-black">
+            <iframe
+              src="https://www.youtube.com/embed/UtyrfHywC48"
+              title="Stunt Demo Reel"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="h-full w-full"
+            />
+          </div>
+          <div className="p-4">
+            <p className="font-semibold">Stunt Demo Reel</p>
+          </div>
         </div>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
@@ -344,38 +302,16 @@ function Index() {
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">Intimacy Coordination</p>
           <h2 className="mt-3 text-4xl font-bold">Conscious, consent-first intimacy work</h2>
           <p className="mt-3 max-w-2xl text-foreground/80">
-            Certified intimacy coordinator with two decades of on-set experience. I choreograph intimate
-            scenes, protect performer boundaries and keep the day moving — so directors get the story and
-            actors stay safe and heard.
+            Certified intimacy coordinator (Diploma, Laura Rikard — TIE) with two decades of on-set
+            experience. I choreograph intimate scenes, protect performer boundaries and keep the day
+            moving — so directors get the story and actors stay safe and heard.
           </p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {icPhases.map((p) => (
-              <div key={p.stage} className="rounded-2xl border border-border bg-card p-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold">{p.stage}</p>
-                <p className="mt-3 text-sm leading-relaxed text-foreground/80">{p.body}</p>
-              </div>
+          <ul className="mt-8 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
+            {icCreditedWork.map((c) => (
+              <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
             ))}
-          </div>
-
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-xl font-bold">Selected Intimacy Credits</h3>
-              <ul className="mt-4 space-y-2 text-sm text-foreground/80">
-                {icCreditedWork.map((c) => (
-                  <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="text-xl font-bold">Training &amp; Approach</h3>
-              <ul className="mt-4 space-y-2 text-sm text-foreground/80">
-                {icApproach.map((c) => (
-                  <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -448,6 +384,34 @@ function Index() {
               </audio>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* REELS */}
+      <section id="reels" className="border-y border-border bg-secondary/40">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="text-sm font-semibold uppercase tracking-widest text-gold">Showreels</p>
+          <h2 className="mt-3 text-4xl font-bold">On Screen</h2>
+          <p className="mt-3 max-w-2xl text-foreground/80">A selection of reels and clips spanning stunts, acting and on-set work.</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {reels.map((r) => (
+              <div key={r.id} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
+                <div className="aspect-video bg-black">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${r.id}`}
+                    title={r.title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="p-4">
+                  <p className="font-semibold">{r.title}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
