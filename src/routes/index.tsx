@@ -5,6 +5,7 @@ import openingPortrait from "@/assets/met-salih-opening-portrait.png.asset.json"
 import headshot1 from "@/assets/media/headshot1.jpg.asset.json";
 import headshot2 from "@/assets/media/headshot2.jpg.asset.json";
 import headshot3 from "@/assets/media/headshot3.jpg.asset.json";
+import headshotGarden from "@/assets/media/headshot-garden.jpg.asset.json";
 import headshot2014 from "@/assets/media/headshot-2014.jpg.asset.json";
 import stuntShot from "@/assets/media/stunt-shot.jpg.asset.json";
 import gritty from "@/assets/media/gritty.jpg.asset.json";
@@ -52,6 +53,7 @@ const gallery = [
   { src: hatchet3.url, title: "Hatchet III — doubling Danielle Harris" },
   { src: bridgewater.url, title: "The Bridgewater Murders" },
   { src: headshot1.url, title: "Headshot" },
+  { src: headshotGarden.url, title: "Headshot" },
   { src: headshot2.url, title: "Headshot" },
   { src: headshot3.url, title: "Headshot" },
   { src: silverDress.url, title: "Portrait" },
