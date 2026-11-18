@@ -237,32 +237,33 @@ function Index() {
           </a>
         </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-3">
-          <CreditList title="Film" items={filmCredits} />
-          <CreditList title="Television" items={tvCredits} />
-          <div className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="font-display text-2xl font-bold">Stunt Coordinator</h3>
-            <ul className="mt-4 divide-y divide-border">
-              {coordCredits.map((c) => (
-                <li key={c} className="py-3 text-sm font-semibold text-foreground">{c}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="mx-auto mt-10 max-w-md overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
-          <div className="aspect-video bg-black">
-            <iframe
-              src="https://www.youtube.com/embed/hefyapgrAbw"
-              title="Stunt Demo Reel"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="h-full w-full"
-            />
-          </div>
-          <div className="p-4">
-            <p className="font-semibold">Stunt Demo Reel</p>
+        <div className="mt-10 rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <CreditList title="Film" items={filmCredits} />
+            <CreditList title="Television" items={tvCredits} />
+            <div>
+              <h3 className="font-display text-2xl font-bold">Stunt Coordinator</h3>
+              <ul className="mt-4 divide-y divide-border">
+                {coordCredits.map((c) => (
+                  <li key={c} className="py-3 text-sm font-semibold text-foreground">{c}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-display text-2xl font-bold">Stunt Demo Reel</h3>
+              <div className="mt-4 overflow-hidden rounded-xl border border-border bg-black">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/hefyapgrAbw"
+                    title="Stunt Demo Reel"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="h-full w-full"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -450,7 +451,7 @@ function Index() {
 
 function CreditList({ title, items }: { title: string; items: { title: string; role: string; coord: string }[] }) {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6">
+    <div>
       <h3 className="font-display text-2xl font-bold">{title}</h3>
       <ul className="mt-4 divide-y divide-border">
         {items.map((c) => (
