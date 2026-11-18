@@ -98,16 +98,6 @@ const icCreditedWork = [
 ];
 
 
-const skills = [
-  "Tae Kwon Do / Kuk Sool Won — Black Belt",
-  "Stunt fighting & weapons",
-  "Precision driving",
-  "High falls",
-  "Snowboarding, skiing",
-
-  "PADI Open Water, horse riding",
-];
-
 function Index() {
   const [open, setOpen] = useState(false);
   const [lightbox, setLightbox] = useState<string | null>(null);
@@ -271,25 +261,14 @@ function Index() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-2">
+        <div className="mt-10 grid gap-8 lg:grid-cols-3">
           <CreditList title="Film" items={filmCredits} />
           <CreditList title="Television" items={tvCredits} />
-        </div>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-xl font-bold">Stunt Coordinator</h3>
-            <ul className="mt-4 space-y-2 text-sm text-foreground/80">
+            <h3 className="font-display text-2xl font-bold">Stunt Coordinator</h3>
+            <ul className="mt-4 divide-y divide-border">
               {coordCredits.map((c) => (
-                <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="text-xl font-bold">Training & Special Skills</h3>
-            <ul className="mt-4 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
-              {skills.map((s) => (
-                <li key={s} className="flex gap-2"><span className="text-gold">◆</span>{s}</li>
+                <li key={c} className="py-3 text-sm font-semibold text-foreground">{c}</li>
               ))}
             </ul>
           </div>
