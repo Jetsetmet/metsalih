@@ -66,11 +66,12 @@ const reels = [
 
 const filmCredits = [
   { title: "Rampage", role: "Stunts", coord: "Dan Stevens / Allan Poppleton" },
-  { title: "Blockers", role: "Stunt Double", coord: "Steve Ritzi" },
   { title: "Girls Trip", role: "Stunt Double — Jada Pinkett Smith", coord: "Lex Geddings" },
   { title: "Jack Reacher 2: Never Go Back", role: "Stunts", coord: "Wade Eastwood" },
   { title: "Geostorm", role: "Stunt Performer", coord: "Charlie Croughwell" },
-  { title: "Cut Throat City", role: "Stunts", coord: "Andy Dylan" },
+  { title: "Dawn of the Planet of the Apes", role: "Stunt Performer", coord: "Charlie Croughwell" },
+  { title: "Now You See Me", role: "Stunt Actor", coord: "Stephen Pope" },
+  { title: "Black Adam", role: "Stunts", coord: "Tom Harper" },
 ];
 
 const tvCredits = [
