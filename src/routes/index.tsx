@@ -274,10 +274,14 @@ function Index() {
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">Intimacy Coordination</p>
           <h2 className="mt-3 text-4xl font-bold">Conscious, consent-first intimacy work</h2>
           <p className="mt-3 max-w-2xl text-foreground/80">
-            As a certified intimacy coordinator, I help directors tell honest stories while keeping every
-            performer safe, heard and in control. From scene choreography and consent conversations to
-            closed-set protocols, I bring a calm, professional presence that lets actors do their best
-            work — and productions wrap with confidence.
+            As an Intimacy Coordinator with extensive experience in film and television, I bring a unique
+            understanding of performance, on-set safety, and the emotional nuances of intimate
+            storytelling. My background as a SAG-AFTRA stunt performer, combined with my training in
+            intimacy coordination and years of experience in holistic wellness, allows me to approach
+            each scene with heightened awareness, sensitivity, and a deep understanding of human
+            connection. I work collaboratively with actors, directors, and production teams to create
+            authentic, compelling intimate scenes while prioritizing consent, clear communication,
+            emotional well-being, and a safe, respectful working environment.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
