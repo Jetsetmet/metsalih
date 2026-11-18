@@ -6,6 +6,7 @@ import headshot1 from "@/assets/media/headshot1.jpg.asset.json";
 import headshot2 from "@/assets/media/headshot2.jpg.asset.json";
 import headshot3 from "@/assets/media/headshot3.jpg.asset.json";
 import headshotGarden from "@/assets/media/headshot-garden.jpg.asset.json";
+import intimacyScene from "@/assets/media/intimacy-scene.png.asset.json";
 import headshot2014 from "@/assets/media/headshot-2014.jpg.asset.json";
 import stuntShot from "@/assets/media/stunt-shot.jpg.asset.json";
 import gritty from "@/assets/media/gritty.jpg.asset.json";
@@ -269,20 +270,22 @@ function Index() {
       {/* INTIMACY COORDINATION */}
       <section id="intimacy" className="border-t border-border">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="text-sm font-semibold uppercase tracking-widest text-gold">Intimacy Coordination</p>
-          <h2 className="mt-3 text-4xl font-bold">Conscious, consent-first intimacy work</h2>
-          <p className="mt-3 max-w-2xl text-foreground/80">
-            As an Intimacy Coordinator with extensive experience in film and television, I bring a unique
-            understanding of performance, on-set safety, and the emotional nuances of intimate
-            storytelling. My background as a SAG-AFTRA stunt performer, combined with my training in
-            intimacy coordination and years of experience in holistic wellness, allows me to approach
-            each scene with heightened awareness, sensitivity, and a deep understanding of human
-            connection. I work collaboratively with actors, directors, and production teams to create
-            authentic, compelling intimate scenes while prioritizing consent, clear communication,
-            emotional well-being, and a safe, respectful working environment.
-          </p>
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-gold">Intimacy Coordination</p>
+              <h2 className="mt-3 text-4xl font-bold">Conscious, consent-first intimacy work</h2>
+              <p className="mt-3 text-foreground/80">
+                As an Intimacy Coordinator with extensive experience in film and television, I bring a unique
+                understanding of performance, on-set safety, and the emotional nuances of intimate
+                storytelling. My background as a SAG-AFTRA stunt performer, combined with my training in
+                intimacy coordination and years of experience in holistic wellness, allows me to approach
+                each scene with heightened awareness, sensitivity, and a deep understanding of human
+                connection. I work collaboratively with actors, directors, and production teams to create
+                authentic, compelling intimate scenes while prioritizing consent, clear communication,
+                emotional well-being, and a safe, respectful working environment.
+              </p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={icResume.url}
               target="_blank"
@@ -298,6 +301,18 @@ function Index() {
             >
               Book intimacy coordination →
             </a>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl" style={{ background: "var(--gradient-gold)", opacity: 0.18, filter: "blur(40px)" }} />
+              <img
+                src={intimacyScene.url}
+                alt="Silhouette of an intimate scene — intimacy coordination on set"
+                width={472}
+                height={588}
+                className="relative aspect-[4/5] w-full rounded-2xl border border-border bg-card object-cover shadow-[var(--shadow-elegant)]"
+              />
+            </div>
           </div>
         </div>
       </section>
