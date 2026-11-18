@@ -251,18 +251,14 @@ function Index() {
             </div>
             <div>
               <h3 className="font-display text-2xl font-bold">Stunt Demo Reel</h3>
-              <div className="mt-4 overflow-hidden rounded-xl border border-border bg-black">
-                <div className="aspect-video">
-                  <iframe
-                    src="https://www.youtube.com/embed/hefyapgrAbw"
-                    title="Stunt Demo Reel"
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="h-full w-full"
-                  />
-                </div>
-              </div>
+              <a
+                href="https://youtu.be/hefyapgrAbw"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-0.5"
+              >
+                ▶ Watch the reel
+              </a>
             </div>
           </div>
         </div>
