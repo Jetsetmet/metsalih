@@ -90,14 +90,6 @@ const coordCredits = [
   "The Miles Were Many — Dir. Ashley Wright",
 ];
 
-const icCreditedWork = [
-  "Interview with the Vampire — Intimacy Coordinator, 60 hrs (2022)",
-  "Tempest — Dir. Greg Green, Intimacy Coordinator, 16 hrs (2024)",
-  "Blood in the Bayou — Dir. Kenn Michael",
-  "The Convent — Dir. Justin Jones",
-];
-
-
 function Index() {
   const [open, setOpen] = useState(false);
   const [lightbox, setLightbox] = useState<string | null>(null);
@@ -245,7 +237,20 @@ function Index() {
           </a>
         </div>
 
-        <div className="mx-auto mt-8 max-w-md overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
+        <div className="mt-10 grid gap-8 lg:grid-cols-3">
+          <CreditList title="Film" items={filmCredits} />
+          <CreditList title="Television" items={tvCredits} />
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <h3 className="font-display text-2xl font-bold">Stunt Coordinator</h3>
+            <ul className="mt-4 divide-y divide-border">
+              {coordCredits.map((c) => (
+                <li key={c} className="py-3 text-sm font-semibold text-foreground">{c}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-md overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-[var(--shadow-elegant)]">
           <div className="aspect-video bg-black">
             <iframe
               src="https://www.youtube.com/embed/hefyapgrAbw"
@@ -260,19 +265,6 @@ function Index() {
             <p className="font-semibold">Stunt Demo Reel</p>
           </div>
         </div>
-
-        <div className="mt-10 grid gap-8 lg:grid-cols-3">
-          <CreditList title="Film" items={filmCredits} />
-          <CreditList title="Television" items={tvCredits} />
-          <div className="rounded-2xl border border-border bg-card p-6">
-            <h3 className="font-display text-2xl font-bold">Stunt Coordinator</h3>
-            <ul className="mt-4 divide-y divide-border">
-              {coordCredits.map((c) => (
-                <li key={c} className="py-3 text-sm font-semibold text-foreground">{c}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </section>
 
       {/* INTIMACY COORDINATION */}
@@ -281,16 +273,11 @@ function Index() {
           <p className="text-sm font-semibold uppercase tracking-widest text-gold">Intimacy Coordination</p>
           <h2 className="mt-3 text-4xl font-bold">Conscious, consent-first intimacy work</h2>
           <p className="mt-3 max-w-2xl text-foreground/80">
-            Certified intimacy coordinator (Diploma, Laura Rikard — TIE) with two decades of on-set
-            experience. I choreograph intimate scenes, protect performer boundaries and keep the day
-            moving — so directors get the story and actors stay safe and heard.
+            As a certified intimacy coordinator, I help directors tell honest stories while keeping every
+            performer safe, heard and in control. From scene choreography and consent conversations to
+            closed-set protocols, I bring a calm, professional presence that lets actors do their best
+            work — and productions wrap with confidence.
           </p>
-
-          <ul className="mt-8 grid gap-2 text-sm text-foreground/80 sm:grid-cols-2">
-            {icCreditedWork.map((c) => (
-              <li key={c} className="flex gap-2"><span className="text-gold">◆</span>{c}</li>
-            ))}
-          </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
